@@ -16,7 +16,7 @@
         <TextBlock
             Style="{StaticResource PageTitleStyle}"
             Margin="{StaticResource MediumLeftMargin}"
-            ><Run Text="Process Page"/><LineBreak/><Run/></TextBlock>
+            ><Run Text="Main"/><LineBreak/><Run/></TextBlock>
         <Grid
             Grid.Row="1"
             Margin="{StaticResource MediumLeftRightMargin}"

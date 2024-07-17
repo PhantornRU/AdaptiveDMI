@@ -4,9 +4,9 @@ using AdaptiveDMI.ViewModels;
 
 namespace AdaptiveDMI.Views;
 
-public partial class ListDetailsPage : Page
+public partial class ConfigPage : Page
 {
-    public ListDetailsPage(ListDetailsViewModel viewModel)
+    public ConfigPage(ConfigViewModel viewModel)
     {
         InitializeComponent();
         DataContext = viewModel;

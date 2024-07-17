@@ -9,7 +9,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace AdaptiveDMI.ViewModels;
 
-public class ListDetailsViewModel : ObservableObject, INavigationAware
+public class ConfigViewModel : ObservableObject, INavigationAware
 {
     private readonly ISampleDataService _sampleDataService;
     private SampleOrder _selected;
@@ -22,7 +22,7 @@ public class ListDetailsViewModel : ObservableObject, INavigationAware
 
     public ObservableCollection<SampleOrder> SampleItems { get; private set; } = new ObservableCollection<SampleOrder>();
 
-    public ListDetailsViewModel(ISampleDataService sampleDataService)
+    public ConfigViewModel(ISampleDataService sampleDataService)
     {
         _sampleDataService = sampleDataService;
     }

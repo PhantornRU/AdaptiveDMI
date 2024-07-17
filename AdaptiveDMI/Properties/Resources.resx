@@ -30,20 +30,20 @@
     <data name="SettingsPageRadioButtonWindowsDefaultTheme" xml:space="preserve">
         <value>Default</value>
     </data>
-    <data name="ShellMenuItemViewsListDetailsPageHeader" xml:space="preserve">
-		    <value>ListDetails</value>
+    <data name="ShellMenuItemViewsConfigPageHeader" xml:space="preserve">
+		    <value>Config</value>
     </data>
-    <data name="ListDetailsPageTitle" xml:space="preserve">
-		    <value>ListDetails</value>
+    <data name="ConfigPageTitle" xml:space="preserve">
+		    <value>Config</value>
     </data>
-    <data name="ListDetailsListDescription" xml:space="preserve">
+    <data name="ConfigListDescription" xml:space="preserve">
 		    <value>Sample Orders</value>
     </data>
     <data name="ShellMenuItemViewsMainPageHeader" xml:space="preserve">
 		    <value>Main</value>
     </data>
 	<data name="ShellMenuItemViewsProcessPageHeader" xml:space="preserve">
-		    <value>Main</value>
+		    <value>Process</value>
     </data>
     <data name="MainPageTitle" xml:space="preserve">
 		    <value>Main</value>

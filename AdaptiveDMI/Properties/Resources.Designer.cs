@@ -72,18 +72,18 @@ namespace AdaptiveDMI.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Sample Orders.
         /// </summary>
-        public static string ListDetailsListDescription {
+        public static string ConfigListDescription {
             get {
-                return ResourceManager.GetString("ListDetailsListDescription", resourceCulture);
+                return ResourceManager.GetString("ConfigListDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на ListDetails.
+        ///   Ищет локализованную строку, похожую на Config.
         /// </summary>
-        public static string ListDetailsPageTitle {
+        public static string ConfigPageTitle {
             get {
-                return ResourceManager.GetString("ListDetailsPageTitle", resourceCulture);
+                return ResourceManager.GetString("ConfigPageTitle", resourceCulture);
             }
         }
         
@@ -214,11 +214,11 @@ namespace AdaptiveDMI.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на ListDetails.
+        ///   Ищет локализованную строку, похожую на Config.
         /// </summary>
-        public static string ShellMenuItemViewsListDetailsPageHeader {
+        public static string ShellMenuItemViewsConfigPageHeader {
             get {
-                return ResourceManager.GetString("ShellMenuItemViewsListDetailsPageHeader", resourceCulture);
+                return ResourceManager.GetString("ShellMenuItemViewsConfigPageHeader", resourceCulture);
             }
         }
         
@@ -232,7 +232,7 @@ namespace AdaptiveDMI.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Main.
+        ///   Ищет локализованную строку, похожую на Process.
         /// </summary>
         public static string ShellMenuItemViewsProcessPageHeader {
             get {

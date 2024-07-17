@@ -109,8 +109,8 @@ public partial class App : Application
         services.AddTransient<MainViewModel>();
         services.AddTransient<MainPage>();
 
-        services.AddTransient<ListDetailsViewModel>();
-        services.AddTransient<ListDetailsPage>();
+        services.AddTransient<ConfigViewModel>();
+        services.AddTransient<ConfigPage>();
 
         services.AddTransient<SettingsViewModel>();
         services.AddTransient<SettingsPage>();

@@ -20,7 +20,7 @@ public class ShellViewModel : ObservableObject
 
     private RelayCommand _goBackCommand;
     private ICommand _menuFileSettingsCommand;
-    private ICommand _menuViewsListDetailsCommand;
+    private ICommand _menuViewsConfigCommand;
     private ICommand _menuViewsProcessCommand;
     private ICommand _menuViewsMainCommand;
     private ICommand _menuFileExitCommand;
@@ -73,14 +73,14 @@ public class ShellViewModel : ObservableObject
     private void OnMenuViewsMain()
         => _navigationService.NavigateTo(typeof(MainViewModel).FullName, null, true);
 
-    public ICommand MenuViewsListDetailsCommand => _menuViewsListDetailsCommand ?? (_menuViewsListDetailsCommand = new RelayCommand(OnMenuViewsListDetails));
+    public ICommand MenuViewsConfigCommand => _menuViewsConfigCommand ?? (_menuViewsConfigCommand = new RelayCommand(OnMenuViewsConfig));
 
-    private void OnMenuViewsListDetails()
-        => _navigationService.NavigateTo(typeof(ListDetailsViewModel).FullName, null, true);
+    private void OnMenuViewsConfig()
+        => _navigationService.NavigateTo(typeof(ConfigViewModel).FullName, null, true);
 
-    public ICommand MenuViewsProcessDetailsCommand => _menuViewsProcessCommand ?? (_menuViewsProcessCommand = new RelayCommand(OnMenuProcessDetails));
+    public ICommand MenuViewsProcessCommand => _menuViewsProcessCommand ?? (_menuViewsProcessCommand = new RelayCommand(OnMenuProcess));
     
-    private void OnMenuProcessDetails()
+    private void OnMenuProcess()
         => _navigationService.NavigateTo(typeof(ProcessViewModel).FullName, null, true);
 
     private void OnMenuFileSettings()
