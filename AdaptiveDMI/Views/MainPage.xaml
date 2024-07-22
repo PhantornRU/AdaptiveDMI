@@ -8,23 +8,166 @@
     xmlns:properties="clr-namespace:AdaptiveDMI.Properties"
     mc:Ignorable="d"
     d:DesignHeight="450" d:DesignWidth="800">
+
+
+    <Page.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <Grid Height="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Column="0"
+                    Text="{Binding Symbol}"
+                    Style="{StaticResource MediumIconStyle}"
+                    Margin="{StaticResource XSmallLeftMargin}"
+                    AutomationProperties.Name="List item icon" />
+                <StackPanel
+                    Grid.Column="1"
+                    Margin="{StaticResource SmallLeftMargin}"
+                    VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource ListTitleStyle}" Text="{Binding Company}" />
+                    <TextBlock Style="{StaticResource ListSubTitleStyle}" Text="{Binding Status}" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DetailTemplate">
+            <ScrollViewer
+                Name="ForegroundElement"
+                IsTabStop="True"
+                HorizontalAlignment="Stretch">
+                <StackPanel HorizontalAlignment="Left" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <!--<TextBlock
+                            Text="{Binding Symbol}"
+                            Style="{StaticResource BigIconStyle}"
+                            AutomationProperties.Name="Detail icon" />
+                        <TextBlock
+                            Margin="{StaticResource SmallLeftMargin}"
+                            VerticalAlignment="Center"
+                            Text="{Binding Company, Mode=OneWay}"
+                            Style="{StaticResource PageTitleStyle}" />-->
+                        <Button Content="BUT" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
+                                     />
+                        <Button Content="BUT" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
+                                     />
+                        <Button Content="BUT" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
+                                     />
+                        <Button Content="BUT" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
+                            />
+                        <Button Content="BUT" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
+                            />
+                        <Button Content="TEST BUTTON" 
+                                Width="133"
+                                Margin="{DynamicResource SmallLeftTopRightBottomMargin}" Background="{DynamicResource MahApps.Brushes.Button.Border}" Click="Button_Click"
+                            />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Background="#3F443F3F">
+                        <StackPanel Orientation="Horizontal" Background="#3FB29797">
+                            <Viewbox Width="200" Height="200" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                <Canvas Width="47" Height="100">
+                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                </Canvas>
+                            </Viewbox>
+                            <Viewbox Width="200" Height="200" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                <Canvas Width="47" Height="100">
+                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                </Canvas>
+                            </Viewbox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Background="#3F343030">
+                            <Viewbox Width="130" Height="130" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                <Canvas Width="47" Height="100">
+                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                </Canvas>
+                            </Viewbox>
+                            <Viewbox Width="130" Height="130" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                <Canvas Width="47" Height="100">
+                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                </Canvas>
+                            </Viewbox>
+                            <Viewbox Width="130" Height="130" 
+                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                <Canvas Width="47" Height="100">
+                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                </Canvas>
+                            </Viewbox>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin="{StaticResource SmallTopMargin}">
+                        <TextBlock
+                            Style="{StaticResource SubtitleTextStyle}"
+                            Text="Status" />
+
+                        <TextBlock
+                            Style="{StaticResource BodyTextStyle}"
+                            Text="{Binding Status, Mode=OneWay}" />
+                        <TextBlock
+                            Style="{StaticResource BodyTextStyle}"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"
+                            AutomationProperties.Name="Detail note 1"
+                            AutomationProperties.HelpText="{Binding Text, RelativeSource={RelativeSource Self}}" />
+
+                        <TextBlock
+                            Margin="{StaticResource SmallTopMargin}"
+                            Style="{StaticResource SubtitleTextStyle}"
+                            Text="Note 2" />
+                        <TextBlock
+                            Margin="{StaticResource MediumBottomMargin}"
+                            Style="{StaticResource BodyTextStyle}"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"
+                            AutomationProperties.Name="Detail note 2"
+                            AutomationProperties.HelpText="{Binding Text, RelativeSource={RelativeSource Self}}" />
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </DataTemplate>
+    </Page.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <TextBlock
-            Style="{StaticResource PageTitleStyle}"
-            Margin="{StaticResource MediumLeftMargin}"
-            ><Run Text="Main"/><LineBreak/><Run/></TextBlock>
-        <Grid
-            Grid.Row="1"
-            Margin="{StaticResource MediumLeftRightMargin}"
-            Background="{DynamicResource MahApps.Brushes.Gray10}">
-            <!--
-            The Mahapps Gray10 color represents where you should place your content.
-            Place your content here.
-            -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="180" MaxWidth="300" Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Style="{StaticResource PageTitleStyle}"
+                Margin="{StaticResource MediumLeftMargin}"
+                Text="{x:Static properties:Resources.ConfigPageTitle}" />
+            <ListView
+                Grid.Row="1"
+                AutomationProperties.Name="{x:Static properties:Resources.ConfigListDescription}"
+                ItemsSource="{Binding SampleItems}"
+                ItemTemplate="{StaticResource ItemTemplate}"
+                SelectedItem="{Binding Selected, Mode=TwoWay}" d:ItemsSource="{d:SampleData ItemCount=9}" />
         </Grid>
+        <ContentControl
+            Grid.Column="1"
+            IsTabStop="False"
+            Content="{Binding Selected}"
+            ContentTemplate="{StaticResource DetailTemplate}" />
     </Grid>
+
+
 </Page>

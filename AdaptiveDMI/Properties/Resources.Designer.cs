@@ -79,7 +79,7 @@ namespace AdaptiveDMI.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Config.
+        ///   Ищет локализованную строку, похожую на Config Name ???.
         /// </summary>
         public static string ConfigPageTitle {
             get {
