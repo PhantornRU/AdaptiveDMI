@@ -97,7 +97,7 @@ namespace AdaptiveDMI.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Settings page placeholder text.  Your app description goes here..
+        ///   Ищет локализованную строку, похожую на Adaptive tool for .dmi files for editing by configs. The tool is suitable for drawing species clothing of different shapes and sizes..
         /// </summary>
         public static string SettingsPageAboutText {
             get {

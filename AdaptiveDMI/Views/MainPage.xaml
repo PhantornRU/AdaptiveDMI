@@ -39,80 +39,162 @@
                 IsTabStop="True"
                 HorizontalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Left" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                        <!--<TextBlock
-                            Text="{Binding Symbol}"
-                            Style="{StaticResource BigIconStyle}"
-                            AutomationProperties.Name="Detail icon" />
-                        <TextBlock
-                            Margin="{StaticResource SmallLeftMargin}"
-                            VerticalAlignment="Center"
-                            Text="{Binding Company, Mode=OneWay}"
-                            Style="{StaticResource PageTitleStyle}" />-->
-                        <Button Content="BUT" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
-                                     />
-                        <Button Content="BUT" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
-                                     />
-                        <Button Content="BUT" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
-                                     />
-                        <Button Content="BUT" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
-                            />
-                        <Button Content="BUT" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}"
-                            />
-                        <Button Content="TEST BUTTON" 
-                                Width="133"
-                                Margin="{DynamicResource SmallLeftTopRightBottomMargin}" Background="{DynamicResource MahApps.Brushes.Button.Border}" Click="Button_Click"
-                            />
-                    </StackPanel>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ToolBarTray Grid.Row="0">
+                            <ToolBar x:Name="toolBar">
+                                <Separator Margin="6,0,10,0" />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}"
+                                    GroupName="Edit" 
+                                    IsChecked="True"
+                                    Content="+"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}"
+                                    GroupName="Edit" 
+                                    Content="Fill"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}"
+                                    GroupName="Edit" 
+                                    Content="Select"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}"
+                                    GroupName="Edit" 
+                                    Content="Move"
+                                    />
+                                <Separator Margin="6,0,6,0" />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}" 
+                                    GroupName="Edit" 
+                                    Content="Pick"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}" 
+                                    GroupName="Edit" 
+                                    Content="Delete"
+                                    />
+
+                                <!--Переключатели "Один, Горизонтально, вертикально, все"-->
+                                <Separator Margin="10,0,10,0" />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}" 
+                                    GroupName="Projection" 
+                                    IsChecked="True"
+                                    Content="1"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}" 
+                                    GroupName="Projection" 
+                                    Content="2Ver"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}" 
+                                    GroupName="Projection" 
+                                    Content="2Hor"
+                                    />
+                                <RadioButton 
+                                    Style="{StaticResource {x:Type ToggleButton}}" 
+                                    GroupName="Projection" 
+                                    Content="All"
+                                    />
+
+                                <!--<ToggleButton>
+                                    <Image Source="icon0.gif" />
+                                </ToggleButton>-->
+
+
+                                <Separator Margin="6,0,6,0" />
+                                <Button Content="TEST"/>
+
+
+                            </ToolBar>
+                        </ToolBarTray>
+                        <!--<TabControl Grid.Row="1" x:Name="mainTabControl"/>-->
+                    </Grid>
 
                     <StackPanel Orientation="Vertical" Background="#3F443F3F">
-                        <StackPanel Orientation="Horizontal" Background="#3FB29797">
-                            <Viewbox Width="200" Height="200" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                <Canvas Width="47" Height="100">
-                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                </Canvas>
-                            </Viewbox>
-                            <Viewbox Width="200" Height="200" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                <Canvas Width="47" Height="100">
-                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                </Canvas>
-                            </Viewbox>
+                        <StackPanel 
+                                Height="225"
+                                Orientation="Horizontal">
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
+                                <Viewbox 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                    <Canvas Width="47" Height="100">
+                                        <!--MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"-->
+                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
+                                <Viewbox 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                    <Canvas Width="47" Height="100">
+                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Background="#3F343030">
-                            <Viewbox Width="130" Height="130" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                <Canvas Width="47" Height="100">
-                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                </Canvas>
-                            </Viewbox>
-                            <Viewbox Width="130" Height="130" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                <Canvas Width="47" Height="100">
-                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                </Canvas>
-                            </Viewbox>
-                            <Viewbox Width="130" Height="130" 
-                                 Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                <Canvas Width="47" Height="100">
-                                    <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                    <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                </Canvas>
-                            </Viewbox>
-                        </StackPanel>
+                        <StackPanel 
+                            Height="150"
+                            Orientation="Horizontal">
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
+                                <Viewbox 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                    <Canvas Width="47" Height="100">
+                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
+                                <Viewbox 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                    <Canvas Width="47" Height="100">
+                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
+                                <Viewbox 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
+                                    <Canvas Width="47" Height="100">
+                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
+                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Margin="{StaticResource SmallTopMargin}">
+                    
+                    
+                    <!--<StackPanel Margin="{StaticResource SmallTopMargin}">
                         <TextBlock
                             Style="{StaticResource SubtitleTextStyle}"
                             Text="Status" />
@@ -136,7 +218,9 @@
                             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"
                             AutomationProperties.Name="Detail note 2"
                             AutomationProperties.HelpText="{Binding Text, RelativeSource={RelativeSource Self}}" />
-                    </StackPanel>
+                    </StackPanel>-->
+                    
+                    
                 </StackPanel>
             </ScrollViewer>
         </DataTemplate>
@@ -169,5 +253,5 @@
             ContentTemplate="{StaticResource DetailTemplate}" />
     </Grid>
 
-
+    
 </Page>

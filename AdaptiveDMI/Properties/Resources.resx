@@ -7,7 +7,7 @@
 		    <value>Settings</value>
     </data>
     <data name="SettingsPageAboutText" xml:space="preserve">
-        <value>Settings page placeholder text.  Your app description goes here.</value>
+        <value>Adaptive tool for .dmi files for editing by configs. The tool is suitable for drawing species clothing of different shapes and sizes.</value>
     </data>
     <data name="SettingsPageAboutTitle" xml:space="preserve">
         <value>About this application</value>
