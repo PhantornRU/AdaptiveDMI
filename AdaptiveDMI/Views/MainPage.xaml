@@ -119,108 +119,92 @@
                         <!--<TabControl Grid.Row="1" x:Name="mainTabControl"/>-->
                     </Grid>
 
-                    <StackPanel Orientation="Vertical" Background="#3F443F3F">
-                        <StackPanel 
-                                Height="225"
-                                Orientation="Horizontal">
-                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
-                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
-                                <Viewbox 
-                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
-                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                    <Canvas Width="47" Height="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Choosen States Row-->
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox  Grid.Row="0" Grid.Column="0"
+                            Stretch="Uniform">
+                                <Border
+                                Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                Margin="{DynamicResource XSmallLeftTopRightBottomMargin}"
+                                MinWidth="100" MinHeight="100">
+                                    <Canvas Grid.Row="1" Grid.Column="0">
                                         <!--MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
                                         MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"-->
-                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
                                     </Canvas>
-                                </Viewbox>
-                            </Border>
-                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
-                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
-                                <Viewbox 
-                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
-                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                    <Canvas Width="47" Height="100">
-                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
+                                </Border>
+                            </Viewbox>
+                            <Viewbox  Grid.Row="0" Grid.Column="1"
+                            Stretch="Uniform">
+                                <Border
+                                Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                Margin="{DynamicResource XSmallLeftTopRightBottomMargin}"
+                                MinWidth="100" MinHeight="100">
+                                    <Canvas Grid.Row="1" Grid.Column="0">
+                                        <!--MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
+                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"-->
                                     </Canvas>
-                                </Viewbox>
-                            </Border>
-                        </StackPanel>
-                        <StackPanel 
-                            Height="150"
-                            Orientation="Horizontal">
-                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
-                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
-                                <Viewbox 
-                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
-                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                    <Canvas Width="47" Height="100">
-                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                    </Canvas>
-                                </Viewbox>
-                            </Border>
-                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
-                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
-                                <Viewbox 
-                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
-                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                    <Canvas Width="47" Height="100">
-                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                    </Canvas>
-                                </Viewbox>
-                            </Border>
-                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
-                                    Margin="{DynamicResource XSmallLeftTopRightBottomMargin}">
-                                <Viewbox 
-                                        MinHeight="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                        MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" 
-                                        Margin="{DynamicResource SmallLeftTopRightBottomMargin}">
-                                    <Canvas Width="47" Height="100">
-                                        <Path Data="M0,19H18V84h29v15H0V19Z" Fill="White"/>
-                                        <Path Data="M46,80H29V15H0V0H46V80Z" Fill="White"/>
-                                    </Canvas>
-                                </Viewbox>
-                            </Border>
-                            </StackPanel>
-                    </StackPanel>
+                                </Border>
+                            </Viewbox>
+                        </Grid>
 
-                    
-                    
-                    <!--<StackPanel Margin="{StaticResource SmallTopMargin}">
-                        <TextBlock
-                            Style="{StaticResource SubtitleTextStyle}"
-                            Text="Status" />
+                        <!--States Row-->
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox  Grid.Row="1" Grid.Column="0"
+                            Stretch="Uniform">
+                                <Border
+                                Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                Margin="{DynamicResource XSmallLeftTopRightBottomMargin}"
+                                MinWidth="100" MinHeight="100">
+                                    <Canvas Grid.Row="1" Grid.Column="0">
+                                    </Canvas>
+                                </Border>
+                            </Viewbox>
+                            <Viewbox  Grid.Row="1" Grid.Column="1"
+                            Stretch="Uniform">
+                                <Border
+                                Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                Margin="{DynamicResource XSmallLeftTopRightBottomMargin}"
+                                MinWidth="100" MinHeight="100">
+                                    <Canvas Grid.Row="1" Grid.Column="0">
+                                    </Canvas>
+                                </Border>
+                            </Viewbox>
+                            <Viewbox  Grid.Row="1" Grid.Column="2"
+                            Stretch="Uniform">
+                                <Border 
+                                Grid.Column="1" BorderBrush="Black" BorderThickness="0.5"
+                                Margin="{DynamicResource XSmallLeftTopRightBottomMargin}"
+                                MinWidth="100" MinHeight="100">
+                                    <Canvas Grid.Row="1" Grid.Column="0">
+                                    </Canvas>
+                                </Border>
+                            </Viewbox>
+                        </Grid>
 
-                        <TextBlock
-                            Style="{StaticResource BodyTextStyle}"
-                            Text="{Binding Status, Mode=OneWay}" />
-                        <TextBlock
-                            Style="{StaticResource BodyTextStyle}"
-                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"
-                            AutomationProperties.Name="Detail note 1"
-                            AutomationProperties.HelpText="{Binding Text, RelativeSource={RelativeSource Self}}" />
+                    </Grid>
 
-                        <TextBlock
-                            Margin="{StaticResource SmallTopMargin}"
-                            Style="{StaticResource SubtitleTextStyle}"
-                            Text="Note 2" />
-                        <TextBlock
-                            Margin="{StaticResource MediumBottomMargin}"
-                            Style="{StaticResource BodyTextStyle}"
-                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"
-                            AutomationProperties.Name="Detail note 2"
-                            AutomationProperties.HelpText="{Binding Text, RelativeSource={RelativeSource Self}}" />
-                    </StackPanel>-->
-                    
-                    
+
                 </StackPanel>
             </ScrollViewer>
         </DataTemplate>
